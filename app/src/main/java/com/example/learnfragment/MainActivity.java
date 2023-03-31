@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.widget.Button;
 import com.example.learnfragment.fragments.FragmentA;
 import com.example.learnfragment.fragments.FragmentB;
 import com.example.learnfragment.fragments.FragmentC;
+import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,11 +21,15 @@ public class MainActivity extends AppCompatActivity {
     FragmentManager manager = getSupportFragmentManager();
     FragmentTransaction transaction = manager.beginTransaction();
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btn = findViewById(R.id.button);
+
+
 
         btnAddA = findViewById(R.id.btnAddA);
         btnPopA = findViewById(R.id.btnPopA);
